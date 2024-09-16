@@ -1,0 +1,119 @@
+type: custom:tv-card
+entity: remote.samsung_q70_series_55
+power_row:
+  - power
+  - settings
+navigation_row: buttons
+source_row:
+  - return
+  - home
+  - play
+  - pause
+volume_row: buttons
+channel_row:
+  - channel_up
+  - guide
+  - channel_down
+custom_keys:
+  power:
+    icon: mdi:power
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_POWER
+  settings:
+    icon: mdi:cog
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_MENU
+  home:
+    icon: mdi:home
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_HOME
+  return:
+    icon: mdi:arrow-left
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_RETURN
+  enter:
+    icon: mdi:checkbox-blank-circle
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_ENTER
+  play:
+    icon: mdi:play
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_PLAY
+  pause:
+    icon: mdi:pause
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_PAUSE
+  up:
+    icon: mdi:chevron-up
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_UP
+  down:
+    icon: mdi:chevron-down
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_DOWN
+  left:
+    icon: mdi:chevron-left
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_LEFT
+  right:
+    icon: mdi:chevron-right
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_RIGHT
+  volume_up:
+    icon: mdi:volume-plus
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_VOLUP
+  volume_down:
+    icon: mdi:volume-minus
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_VOLDOWN
+  volume_mute:
+    icon: mdi:volume-mute
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_MUTE
+  guide:
+    icon: mdi:television-box
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_GUIDE
+  channel_up:
+    icon: mdi:menu-up
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_CHUP
+  channel_down:
+    icon: mdi:menu-down
+    service: remote.send_command
+    service_data:
+      entity_id: remote.samsung_q70_series_55
+      command: KEY_CHDOWN
