@@ -1,5 +1,5 @@
 <h2><span style="text-decoration: underline;"><strong>📺</strong></span> Samsung Remote Control for home assistant</h2>
-<p dir="auto">I wanted to share a card I created to manage my Samsung Q70 55&rsquo; TV</p>
+<p dir="auto">I wanted to share a board I created, thanks to various expert guides found online, to manage my Samsung Q70 55&rsquo; TV</p>
 <p dir="auto">Instructions:</p>
 <ol dir="auto">
 <li>from Hacs, install:<br />a. <a title="tv-card" href="https://github.com/usernein/tv-card" target="_blank">tv-card</a></li>
