@@ -8,3 +8,7 @@
 </ol>
 <p><img src="https://github.com/Simonz82/ha_tv_samsung/blob/main/example/samsung_remote_control.jpg" alt="samsung_remote_control" /></p>
 <p dir="auto">Enjoy!</p>
+
+if you would like to support the various shares I do please help me with a kind offer:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C713VTGJ)
