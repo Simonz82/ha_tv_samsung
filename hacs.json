@@ -1,0 +1,7 @@
+{
+  "name": "Samsung TV Remote Card",
+  "filename": "samsung-tv-remote-card.js",
+  "content_in_root": true,
+  "render_readme": true,
+  "homeassistant": "2024.1.0"
+}
