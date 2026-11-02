@@ -1,5 +1,7 @@
 # Samsung TV Remote Card
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Simonz82&repository=ha_tv_samsung&category=plugin)
+
 Samsung-style remote control card for Home Assistant, for Tizen TVs (`samsungtv_smart` or the core `samsungtv` integration). No dependencies, vanilla JS, visual editor, IT/EN texts following the Home Assistant language.
 
 ![Samsung TV Remote Card](assets/screenshot.png)
@@ -12,7 +14,11 @@ Samsung-style remote control card for Home Assistant, for Tizen TVs (`samsungtv_
 - With the TV off or unavailable every key is disabled except Power.
 
 ## Installation (HACS)
-1. HACS > three dots > **Custom repositories**.
+1. Click the button below to open the repository in HACS:
+
+   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Simonz82&repository=ha_tv_samsung&category=plugin)
+
+   Manual method: HACS > three dots > **Custom repositories**.
 2. Repository `https://github.com/Simonz82/ha_tv_samsung`, type **Dashboard** (Lovelace). Add.
 3. Search "Samsung TV Remote Card", download, reload the browser.
 
@@ -43,7 +49,7 @@ An app is launched with `select_source` when it is in `source_list` (or `source`
 `media_player.turn_on/turn_off/volume_up/volume_down/volume_mute/volume_set/media_play/media_pause/media_stop/select_source/select_sound_mode/play_media (send_key, app)`, `samsungtv_smart.select_picture_mode`, `samsungtv_smart.set_art_mode`.
 
 ## Italiano
-Card telecomando in stile Samsung per TV Tizen. Su telefono mostra il telecomando verticale, su tablet/desktop affianca il pannello con media, sorgenti, app, volume e modalita. Installazione da HACS: Repository personalizzati > `https://github.com/Simonz82/ha_tv_samsung` > tipo Dashboard. Configurazione come sopra; con TV spenta e' attivo solo il tasto di accensione.
+Card telecomando in stile Samsung per TV Tizen. Su telefono mostra il telecomando verticale, su tablet/desktop affianca il pannello con media, sorgenti, app, volume e modalita. Installazione da HACS: pulsante My Home Assistant in cima alla pagina, oppure a mano Repository personalizzati > `https://github.com/Simonz82/ha_tv_samsung` > tipo Dashboard. Configurazione come sopra; con TV spenta e' attivo solo il tasto di accensione.
 
 La vecchia card YAML (basata su `tv-card`) e' nella cartella [`legacy/`](legacy/).
 
