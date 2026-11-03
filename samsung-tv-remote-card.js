@@ -89,7 +89,7 @@ class SamsungTvRemoteCard extends HTMLElement {
     const e = Object.keys(hass.states).find((k) => k.startsWith("media_player.") && hass.states[k].attributes.device_class === "tv");
     return { entity: e || "media_player.tv" };
   }
-  static getConfigElement() { return document.createElement("samsung-tv-remote-card-editor"); }
+  static getConfigElement() { return document.createElement("shc-samsung-tv-remote-card-editor"); }
   setConfig(config) {
     if (!config || !config.entity) throw new Error("entity is required");
     this._config = { layout: "auto", ...config };
@@ -257,7 +257,13 @@ class SamsungTvRemoteCard extends HTMLElement {
     q("#pw").style.pointerEvents = "auto";
   }
 }
-customElements.define("samsung-tv-remote-card", SamsungTvRemoteCard);
+// Nome univoco (prefisso shc-): evita il conflitto con altre card che usano "samsung-tv-remote-card".
+if (!customElements.get("shc-samsung-tv-remote-card")) customElements.define("shc-samsung-tv-remote-card", SamsungTvRemoteCard);
+// Alias del vecchio nome, registrato SOLO se nessun'altra card lo ha gia' preso (controllo dopo un attimo,
+// cosi' un'altra card caricata subito dopo non viene sovrascritta). Le config "custom:samsung-tv-remote-card" esistenti continuano a funzionare.
+setTimeout(() => {
+  if (!customElements.get("samsung-tv-remote-card")) customElements.define("samsung-tv-remote-card", class extends SamsungTvRemoteCard {});
+}, 1500);
 
 class SamsungTvRemoteCardEditor extends HTMLElement {
   setConfig(c) { this._config = c; this._render(); }
@@ -295,7 +301,7 @@ class SamsungTvRemoteCardEditor extends HTMLElement {
     this._form.computeLabel = (s) => ({ entity: t.entity, name: t.name, remote_entity: t.remote, power_entity: t.power, turn_on_script: t.script, layout: t.layout, show_picture: t.sp, show_sound: t.ss, show_art: t.sa, show_ambient: t.sm }[s.name] || s.name);
   }
 }
-customElements.define("samsung-tv-remote-card-editor", SamsungTvRemoteCardEditor);
+if (!customElements.get("shc-samsung-tv-remote-card-editor")) customElements.define("shc-samsung-tv-remote-card-editor", SamsungTvRemoteCardEditor);
 window.customCards = window.customCards || [];
-window.customCards.push({ type: "samsung-tv-remote-card", name: "Samsung TV Remote Card", description: "Samsung-style remote for samsungtv_smart / samsungtv", preview: false });
-console.info("%c SAMSUNG-TV-REMOTE-CARD %c 1.0.0", "background:#2563eb;color:#fff", "");
+window.customCards.push({ type: "shc-samsung-tv-remote-card", name: "Samsung TV Remote Card (shc)", description: "Samsung-style remote for samsungtv_smart / samsungtv", preview: false });
+console.info("%c SAMSUNG-TV-REMOTE-CARD %c 1.0.1", "background:#2563eb;color:#fff", "");

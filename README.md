@@ -25,8 +25,10 @@ Samsung-style remote control card for Home Assistant, for Tizen TVs (`samsungtv_
 Manual: copy `samsung-tv-remote-card.js` to `/config/www/samsung-tv-remote-card/` and add the resource `/local/samsung-tv-remote-card/samsung-tv-remote-card.js` (type `module`).
 
 ## Configuration
+> Since 1.0.1 the card type is `custom:shc-samsung-tv-remote-card` (unique name, no clash with other Samsung remote cards). The old `custom:samsung-tv-remote-card` still works as an alias unless another card already uses that name; if so, switch your YAML to the new type.
+
 ```yaml
-type: custom:samsung-tv-remote-card
+type: custom:shc-samsung-tv-remote-card
 entity: media_player.tv          # required
 name: Living room TV             # optional
 remote_entity: remote.tv         # optional: send keys through remote.send_command
